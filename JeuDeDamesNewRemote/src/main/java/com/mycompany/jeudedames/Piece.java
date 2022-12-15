@@ -14,12 +14,45 @@ public abstract class Piece {
 
     private boolean isEnJeu;
 
-    private int abscisse;
-
-    private int ordonnee;
+    private Position pos;
 
     private String couleur;
 
     public abstract void deplacer();
 
+    public Joueur getPossesseur() {
+        return possesseur;
+    }
+
+    public void setPossesseur(Joueur possesseur) {
+        this.possesseur = possesseur;
+    }
+
+    public boolean isIsEnJeu() {
+        return isEnJeu;
+    }
+
+    public void setIsEnJeu(boolean isEnJeu) {
+        this.isEnJeu = isEnJeu;
+    }
+
+    public Position getPos() {
+        return pos;
+    }
+
+    public void setPos(Position pos) {
+        this.pos = new Position(pos);
+    }
+
+    public String getCouleur() {
+        return couleur;
+    }
+
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
+    }
+
+    
+    
+    
 }
