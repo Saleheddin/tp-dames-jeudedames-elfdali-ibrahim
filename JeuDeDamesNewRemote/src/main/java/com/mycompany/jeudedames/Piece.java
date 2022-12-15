@@ -53,6 +53,16 @@ public abstract class Piece {
     }
 
     
+    public boolean isDeplacementPossible(Deplacement dep){
+        return true;
+        
+    }
     
+    
+    public void deplacer(Deplacement dep){
+        this.setPos(new Position(dep.getNewAbscisse(),dep.getNewOrdonnee()));
+        
+        
+    }
     
 }
