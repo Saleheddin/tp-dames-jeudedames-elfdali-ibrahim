@@ -19,7 +19,17 @@ public class Joueur {
     
     
     
-    public void deplacerPiece(int i,int j, ArrayList<Deplacement> dep){
+    public void deplacerPiece(int i,int j, ArrayList<Deplacement> dep,Plateau pat){
+        Piece piece=getPiecesByPosition(i, j);
+        Iterator it=dep.iterator();
+        while(it.hasNext()){
+           Deplacement deplacement=(Deplacement) it.next();
+           if(piece.isDeplacementPossible(deplacement)){
+               piece.deplacer(deplacement,pat);
+           }
+           
+           
+        }
         
         
         
@@ -46,5 +56,9 @@ public class Joueur {
     return pieceFound;
     }
     
+    
+    public boolean isMyPiece(Piece p){
+        return true;
+    }
     
 }
