@@ -42,12 +42,4 @@ public class JeuDeDames {
         
         
     }
-
-    
-    // Méthode permettant de simuler les tours de jeu du joueurs
-public static void tourDeJeu(){
-    
-    
-}
-    
 }
