@@ -9,53 +9,26 @@ package com.mycompany.jeudedames;
  * @author alexisibrahim
  */
 public class Case {
-    private int numero;
-    
-    private int abscisse;
-    
-    private int ordonnee;
-    
+    private Position pos;
+    private Pion pion;
     private String couleur;
-
-    public int getNumero() {
-        return numero;
+    
+    public Case(String couleur) {
+        this.couleur = couleur;
     }
 
-    public void setNumero(int numero) {
-        this.numero = numero;
+    public void setCouleur(String couleur) {
+        this.couleur = couleur;
     }
 
-    public int getAbscisse() {
-        return abscisse;
-    }
-
-    public void setAbscisse(int abscisse) {
-        this.abscisse = abscisse;
-    }
-
-    public int getOrdonnee() {
-        return ordonnee;
-    }
-
-    public void setOrdonnee(int ordonnee) {
-        this.ordonnee = ordonnee;
-    }
-
-    public Case(int numero, int abscisse, int ordonnee) {
-        this.numero = numero;
-        this.abscisse = abscisse;
-        this.ordonnee = ordonnee;
-    }
-
-    public Case(int abscisse, int ordonnee) {
-        this.abscisse = abscisse;
-        this.ordonnee = ordonnee;
-    }
-
-    @Override
-    public String toString() {
-        return "Case{" + "numero=" + numero + ", abscisse=" + abscisse + ", ordonnee=" + ordonnee + '}';
+    public String getCouleur() {
+        return couleur;
     }
     
-    
+    public boolean isempty(){
+        if(this.pion == null){
+            return true;
+        }
+        return false;
+    }
 }
