@@ -13,31 +13,38 @@ import java.util.Iterator;
  */
 public class Plateau {
     
-    private int largeur;
-    
-    private int hauteur;
-    
-    
-    private ArrayList<Piece> pieces;
+    private int taille;
+    private Case[][] cases ;
     
     
-    public void removeByPosition(){
+     public Plateau(int taille) {
+        this.taille = taille;
+        this.cases = new Case[taille][taille];
+        boolean doitEtreBlanc;
+        for (int y = 0; y < this.cases.length; y++) {
+            doitEtreBlanc = (y%2 == 0);
+            for (int x = 0; x < this.cases[y].length; x++) {
+                if (doitEtreBlanc) {
+                    this.cases[y][x] = new Case("B");
+                    doitEtreBlanc = false;
+                } else {
+                    this.cases[y][x] = new Case("N");
+                    doitEtreBlanc = true;
+                }
+            }
+        }
+    }
+     
+    
+    public void removeByPosition(int i, int j){
         
     }
-    
-    
     public boolean containsPieceWithPos(int i,int j){
-        Iterator it= pieces.iterator();
         boolean pieceFound=false;
-        while(it.hasNext()){
-            Piece p=(Piece) it.next();
-            if(p.getPos().equals(new Position(i,j))){
-                pieceFound=true;
-            }
-           
+        if(!cases[i][j].isempty()){
+            pieceFound = true;
         }
         return pieceFound;
-        
     }
     
     
