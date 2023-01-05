@@ -61,9 +61,6 @@ public abstract class Piece {
     
     public void deplacer(Deplacement dep, Plateau pat){
         
-        ///this.setPos(new Position(dep.getNewAbscisse(),dep.getNewOrdonnee()));
-        
-        
     }
     
 }
