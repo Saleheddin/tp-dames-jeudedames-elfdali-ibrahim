@@ -13,11 +13,9 @@ import java.util.Iterator;
  */
 public class Joueur {
     
-    private String nom;
+    private String username;
     
     private ArrayList<Piece> pieces;
-    
-    
     
     public void deplacerPiece(int i,int j, ArrayList<Deplacement> dep,Plateau pat){
         Piece piece=getPiecesByPosition(i, j);

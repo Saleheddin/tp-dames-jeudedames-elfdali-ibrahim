@@ -37,7 +37,9 @@ public class Plateau {
      
     
     public void removeByPosition(int i, int j){
-        
+        if(!cases[i][j].isempty()){
+            cases[i][j].setPion(null);
+        }
     }
     public boolean containsPieceWithPos(int i,int j){
         boolean pieceFound=false;

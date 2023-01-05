@@ -12,6 +12,14 @@ public class Case {
     private Position pos;
     private Pion pion;
     private String couleur;
+
+    public void setPion(Pion pion) {
+        this.pion = pion;
+    }
+
+    public Pion getPion() {
+        return pion;
+    }
     
     public Case(String couleur) {
         this.couleur = couleur;
