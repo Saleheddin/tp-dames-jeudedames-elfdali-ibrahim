@@ -23,7 +23,7 @@ public class Joueur {
         while(it.hasNext()){
            Deplacement deplacement=(Deplacement) it.next();
            if(piece.isDeplacementPossible(deplacement)){
-               piece.deplacer(deplacement,pat);
+               piece.move(deplacement,pat);
            }
            
            

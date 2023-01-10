@@ -4,6 +4,8 @@
  */
 package com.mycompany.jeudedames;
 
+import java.util.List;
+
 /**
  *
  * @author alexisibrahim
@@ -17,9 +19,10 @@ public abstract class Piece {
     private Position pos;
 
     private String couleur;
+    
+    private List<Position> PossibleMoves;
 
-    public abstract void deplacer();
-
+    
     public Joueur getPossesseur() {
         return possesseur;
     }
@@ -57,10 +60,8 @@ public abstract class Piece {
         return true;
         
     }
-    
-    
-    public void deplacer(Deplacement dep, Plateau pat){
-        
-    }
-    
+
+    public abstract boolean EatAgain();
+    public abstract void move(Deplacement dep, Plateau pat);
+    public abstract void updatePossibleMoves();
 }
