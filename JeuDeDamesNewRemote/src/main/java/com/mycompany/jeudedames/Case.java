@@ -13,6 +13,7 @@ public class Case {
     private Pion pion;
     private String couleur;
 
+    
     public void setPion(Pion pion) {
         this.pion = pion;
     }
@@ -38,5 +39,13 @@ public class Case {
             return true;
         }
         return false;
+    }
+
+    public Position getPos() {
+        return pos;
+    }
+
+    public void setPos(Position pos) {
+        this.pos = pos;
     }
 }
