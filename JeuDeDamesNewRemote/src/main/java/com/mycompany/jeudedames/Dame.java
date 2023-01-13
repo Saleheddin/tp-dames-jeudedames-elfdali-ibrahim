@@ -8,6 +8,12 @@ public class Dame extends Piece {
     }
 
     @Override
+    public boolean caneat() {
+        // TODO Auto-generated method stub
+        return true;
+    }
+
+    @Override
     public boolean EatAgain() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
@@ -18,7 +24,7 @@ public class Dame extends Piece {
     }
 
     @Override
-    public void updatePossibleMoves() {
+    public void updatePossibleMoves(Plateau p) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 

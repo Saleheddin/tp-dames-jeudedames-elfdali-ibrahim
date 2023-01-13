@@ -1,7 +1,8 @@
 
 package com.mycompany.jeudedames;
 
-import java.util.List;
+import java.util.ArrayList;
+import java.util.ArrayList;
 
 
 public abstract class Piece {
@@ -10,11 +11,14 @@ public abstract class Piece {
 
     private boolean isEnJeu;
 
-    private Position pos;
+    protected Position pos;
 
     private String couleur;
     
-    private List<Position> PossibleMoves;
+    /**
+     * all the possible moves that this pawn can do
+     */
+    protected ArrayList<Position> PossibleMoves;
 
     
     public Joueur getPossesseur() {
@@ -57,5 +61,6 @@ public abstract class Piece {
 
     public abstract boolean EatAgain();
     public abstract void move(Deplacement dep, Plateau pat);
-    public abstract void updatePossibleMoves();
+    public abstract void updatePossibleMoves(Plateau p);
+    public abstract boolean caneat();
 }

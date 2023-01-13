@@ -34,6 +34,9 @@ public class Position {
         this.abscisse=pos.getAbscisse();
     }
     
-    
+    public void tranlate(int dx, int dy){
+        this.abscisse += dx;
+        this.ordonnee += dy;
+    }
     
 }

@@ -7,7 +7,7 @@ import java.util.Iterator;
 public class Plateau {
     
     private int taille;
-    private Case[][] cases ;
+    protected Case[][] cases ;
     
     
      public Plateau(int taille) {
